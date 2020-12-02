@@ -78,19 +78,19 @@ const DashboardStudent = () => {
 
       <View style={styles.FilterContainer}>
         <TouchableOpacity
-          onPress={() => filterQuestions('português')}
+          onPress={() => filterQuestions('portugues')}
           style={styles.ButtonFilter}
         >
           <Text style={styles.TextButtonFilter}>Português</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => filterQuestions('Matemática')}
+          onPress={() => filterQuestions('matematica')}
           style={styles.ButtonFilter}
         >
           <Text style={styles.TextButtonFilter}>Matemática</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => filterQuestions('Programação')}
+          onPress={() => filterQuestions('programacao')}
           style={styles.ButtonFilter}
         >
           <Text style={styles.TextButtonFilter}>Programação</Text>

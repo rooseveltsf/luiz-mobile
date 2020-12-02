@@ -97,20 +97,23 @@ const AuthProvider = ({ children }) => {
     }
   }, []);
 
-  const addAvatar = useCallback(async (data) => {
-    const response = await api.put('add-avatar', data);
+  const addAvatar = useCallback(
+    async (data) => {
+      const response = await api.put('add-avatar', data);
 
-    const { avatar } = response.data;
+      const { avatar } = response.data;
 
-    setUser((oldData) => {
-      return {
-        ...oldData,
+      const dataAvatar = {
+        ...user,
         avatar,
       };
-    });
 
-    await AsyncStorage.setItem('@user', user);
-  }, []);
+      setUser(dataAvatar);
+
+      await AsyncStorage.setItem('@user', JSON.stringify(dataAvatar));
+    },
+    [user]
+  );
 
   async function setQuestions(data) {
     setLoading(true);

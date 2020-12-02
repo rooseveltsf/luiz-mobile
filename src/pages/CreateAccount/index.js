@@ -164,9 +164,9 @@ const CreateAccount = () => {
             enabled={isTeacher}
           >
             <Picker.Item label="Selecione uma materia" value={null} />
-            <Picker.Item label="Matemática" value="matemática" />
-            <Picker.Item label="Português" value="português" />
-            <Picker.Item label="Programação" value="programação" />
+            <Picker.Item label="Matemática" value="matematica" />
+            <Picker.Item label="Português" value="portugues" />
+            <Picker.Item label="Programação" value="programacao" />
           </Picker>
         </View>
 

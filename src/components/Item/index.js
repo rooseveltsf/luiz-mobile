@@ -51,9 +51,13 @@ const Item = ({ data, questions }) => {
   }, [questions]);
 
   useEffect(() => {
-    api
-      .get(`/rating/${data.teacher.id}`)
-      .then((response) => setMediaTeacher(response.data.media));
+    api.get(`/rating/${data.teacher_id}`).then((response) => {
+      if (!response.data.media) {
+        setMediaTeacher(0);
+      } else {
+        setMediaTeacher(response.data.media);
+      }
+    });
   }, [data]);
 
   return (
